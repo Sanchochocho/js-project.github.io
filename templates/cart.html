@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(145deg, #3c0079, #18034f);
+            color: #fff;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 25px;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .main-nav a:hover {
+            color: #7f3de3;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin: 20px 0;
+        }
+
+        #cart-items {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px 0;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        h3 {
+            margin: 0 0 10px 0;
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            background: #6622cc;
+            border: none;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #7f3de3;
+        }
+
+        .remove-item {
+            background: #cc2262;
+        }
+
+        .remove-item:hover {
+            background: #e33d7f;
+        }
+
+        #cart-summary {
+            text-align: right;
+            font-size: 18px;
+            font-weight: bold;
+            
+        }
+        #buy-button {
+            width: 180px;
+            height: 40px;
+            font-size: 15px;
+            margin-top: 20px;
+            margin-left: 30px;
+            margin-bottom: 40px;
+        }
+        img {
+            max-width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-hero">
+        <div class="container">
+            <a href="#" class="logo">
+                <h1>GLOBAL GAME</h1>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="./index.html">Главная страница</a></li>
+                    <li><a href="./catalog.html">Каталог</a></li>
+                    <li><a href="./profile.html">Личный кабинет</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Ваша корзина</h1>
+        <div id="cart-items"></div>
+        <div id="cart-summary">
+            <button id="buy-button">Купить</button>
+        </div>
+    </div>
+    
+    <script src="../cart.js"></script>
+</body>
+</html>
